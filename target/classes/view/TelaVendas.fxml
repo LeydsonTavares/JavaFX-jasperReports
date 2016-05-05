@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox prefHeight="523.0" prefWidth="1266.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaVendasController">
+   <children>
+      <AnchorPane prefHeight="523.0" prefWidth="1328.0">
+         <children>
+            <ComboBox fx:id="cb_produtos" layoutX="37.0" layoutY="164.0" onKeyReleased="#letraDigitada" prefHeight="25.0" prefWidth="507.0">
+               <effect>
+                  <DropShadow color="#08f204" />
+               </effect></ComboBox>
+            <TableView fx:id="tb_ProdutosInseridos" layoutX="23.0" layoutY="223.0" prefHeight="247.0" prefWidth="727.0">
+               <effect>
+                  <DropShadow color="#08f204" />
+               </effect>
+            </TableView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f4b7c" height="388.0" layoutX="785.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" width="444.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#616e79" height="104.0" layoutX="798.0" layoutY="348.0" stroke="BLACK" strokeType="INSIDE" width="418.0">
+               <effect>
+                  <DropShadow color="#08f204" />
+               </effect>
+            </Rectangle>
+            <Label layoutX="798.0" layoutY="286.0" prefHeight="45.0" prefWidth="207.0" text="Valor recebido" textFill="#f5f5f5">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="797.0" layoutY="187.0" prefHeight="45.0" prefWidth="158.0" text="Desconto " textFill="#f5f5f5">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="822.0" layoutY="375.0" prefHeight="51.0" prefWidth="108.0" text="Troco " textFill="#f5f5f5">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_valorTroco" alignment="CENTER_RIGHT" layoutX="947.0" layoutY="353.0" prefHeight="74.0" prefWidth="268.0" textAlignment="CENTER" textFill="#f5f5f5">
+               <font>
+                  <Font size="65.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_desconto" alignment="CENTER_RIGHT" layoutX="1087.0" layoutY="187.0" prefHeight="44.0" prefWidth="126.0" promptText="0,00 $">
+               <font>
+                  <Font size="20.0" />
+               </font></TextField>
+            <Button fx:id="btn_EfetuarVenda" alignment="CENTER_RIGHT" layoutX="785.0" layoutY="24.0" mnemonicParsing="false" onAction="#efetuarVenda" prefHeight="45.0" prefWidth="135.0" text="Efetuar Venda">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btn_CancelarVenda" alignment="CENTER_RIGHT" layoutX="940.0" layoutY="25.0" mnemonicParsing="false" onAction="#cancelarVenda" prefHeight="44.0" prefWidth="135.0" text="Cancelar Venda">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Label fx:id="lb_nomeCliente" layoutX="81.0" layoutY="8.0" prefHeight="25.0" prefWidth="334.0" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_valorRecebido" alignment="CENTER_RIGHT" layoutX="1086.0" layoutY="287.0" prefHeight="21.0" prefWidth="126.0" promptText="0,00 $">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="799.0" layoutY="232.0" prefHeight="45.0" prefWidth="198.0" text="Valor a cobrar" textFill="#f5f5f5">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_totalVenda" alignment="CENTER_RIGHT" layoutX="1081.0" layoutY="140.0" prefHeight="45.0" prefWidth="135.0" textAlignment="JUSTIFY" textFill="#f5f5f5">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txf_quantidade" alignment="CENTER" layoutX="585.0" layoutY="164.0" onKeyPressed="#EnterAcionado" prefHeight="25.0" prefWidth="149.0">
+               <effect>
+                  <DropShadow color="#08f204" />
+               </effect>
+            </TextField>
+            <Separator layoutX="22.0" layoutY="206.0" prefHeight="0.0" prefWidth="727.0" />
+            <Separator layoutX="20.0" layoutY="126.0" orientation="VERTICAL" prefHeight="81.0" prefWidth="0.0" />
+            <Separator layoutX="746.0" layoutY="126.0" orientation="VERTICAL" prefHeight="81.0" prefWidth="0.0" />
+            <Separator layoutX="106.0" layoutY="125.0" prefHeight="3.0" prefWidth="642.0" />
+            <Label layoutX="52.0" layoutY="115.0" opacity="0.43" prefHeight="21.0" prefWidth="59.0" text="Produto" textFill="WHITE" />
+            <Separator layoutX="21.0" layoutY="125.0" prefHeight="3.0" prefWidth="20.0" />
+            <Label layoutX="32.0" layoutY="142.0" text="Descrição" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="585.0" layoutY="142.0" prefHeight="21.0" prefWidth="108.0" text="Quantidade" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="21.0" layoutY="106.0" prefHeight="0.0" prefWidth="727.0" />
+            <Separator layoutX="20.0" layoutY="25.0" orientation="VERTICAL" prefHeight="81.0" prefWidth="0.0" />
+            <Separator layoutX="746.0" layoutY="25.0" orientation="VERTICAL" prefHeight="81.0" prefWidth="0.0" />
+            <Separator layoutX="106.0" layoutY="25.0" prefHeight="3.0" prefWidth="642.0" />
+            <Separator layoutX="21.0" layoutY="24.0" prefHeight="3.0" prefWidth="20.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="14.0" opacity="0.43" prefHeight="21.0" prefWidth="59.0" text="Cliente" textFill="WHITE" />
+            <TextField fx:id="txf_cpfCliente" layoutX="37.0" layoutY="66.0">
+               <effect>
+                  <DropShadow color="#08f204" />
+               </effect>
+            </TextField>
+            <TextField fx:id="txf_nomeCliente" layoutX="204.0" layoutY="66.0" prefHeight="25.0" prefWidth="370.0">
+               <effect>
+                  <DropShadow color="#08f204" />
+               </effect>
+            </TextField>
+            <CheckBox fx:id="cb_cadatrado" layoutX="608.0" layoutY="45.0" mnemonicParsing="false" onAction="#clienteCadastrado" prefHeight="17.0" prefWidth="108.0" text="Cadastrado" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="cb_NaoCadastrado" layoutX="608.0" layoutY="68.0" mnemonicParsing="false" onAction="#clienteNaoCadastrado" prefHeight="21.0" prefWidth="135.0" text="Não cadastrado" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </CheckBox>
+            <Button fx:id="btn_RemoverItem" alignment="CENTER_RIGHT" layoutX="1094.0" layoutY="24.0" mnemonicParsing="false" onAction="#removerItem" prefHeight="45.0" prefWidth="135.0" text="Remover Item">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <ImageView disable="true" fitHeight="45.0" fitWidth="39.0" layoutX="788.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon%20Confirmation.png" />
+               </image>
+            </ImageView>
+            <ImageView disable="true" fitHeight="48.0" fitWidth="39.0" layoutX="942.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon%20Cancel.png" />
+               </image>
+            </ImageView>
+            <ImageView disable="true" fitHeight="39.0" fitWidth="39.0" layoutX="1098.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon%20Remover.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="39.0" layoutY="43.0" text="CPF" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="204.0" layoutY="43.0" prefHeight="21.0" prefWidth="79.0" text="Nome" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="797.0" layoutY="93.0" prefHeight="45.0" prefWidth="126.0" text="Total custo" textFill="#f5f5f5">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_totalCusto" alignment="CENTER_RIGHT" layoutX="1081.0" layoutY="94.0" prefHeight="45.0" prefWidth="135.0" textAlignment="JUSTIFY" textFill="#f5f5f5">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="797.0" layoutY="141.0" prefHeight="45.0" prefWidth="172.0" text="Total da venda" textFill="#f5f5f5">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb_valorAcobrar" alignment="CENTER_RIGHT" layoutX="1080.0" layoutY="238.0" prefHeight="45.0" prefWidth="135.0" textAlignment="JUSTIFY" textFill="#f5f5f5">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

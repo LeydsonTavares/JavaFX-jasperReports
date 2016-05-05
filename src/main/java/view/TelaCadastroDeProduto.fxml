@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCadastroDeProdutoController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="810.0">
+         <children>
+            <Label layoutX="65.0" layoutY="102.0" text="Nome" textFill="#252323">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_name_product" layoutX="65.0" layoutY="135.0" prefHeight="30.0" prefWidth="248.0" promptText="Nome do produto ou serviço" />
+            <Label layoutX="372.0" layoutY="102.0" text="Data Cadastro" textFill="#393737">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="65.0" layoutY="195.0" text="Valor de custo" textFill="#2f2c2c">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_value_cost" layoutX="65.0" layoutY="232.0" prefHeight="30.0" prefWidth="248.0" promptText="Digite o valor de custo" />
+            <Label layoutX="369.0" layoutY="195.0" text="Valor de venda" textFill="#464444">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_value_sale" layoutX="365.0" layoutY="232.0" prefHeight="30.0" prefWidth="248.0" promptText="Digite o valor de venda" />
+            <TextField fx:id="txt_amount" layoutX="646.0" layoutY="232.0" prefHeight="30.0" prefWidth="248.0" promptText="Digite a quantidade em estoque" />
+            <Label layoutX="646.0" layoutY="195.0" text="Quantidade" textFill="#282626">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_save" layoutX="61.0" layoutY="315.0" mnemonicParsing="false" onAction="#salvarProduto" prefHeight="30.0" prefWidth="107.0" textFill="#1b1a1a">
+               <effect>
+                  <InnerShadow color="#00ff09" height="255.0" radius="68.5" />
+               </effect></Button>
+            <Label layoutX="61.0" layoutY="26.0" text="Cadastrar novo produto ou serviço">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_dateRegister" layoutX="365.0" layoutY="135.0" prefHeight="30.0" prefWidth="248.0" promptText="___/___/___" />
+            <Text disable="true" layoutX="61.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salvar" textAlignment="CENTER" wrappingWidth="107.00001096725464">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Button fx:id="btn_voltarTela" layoutX="779.0" layoutY="37.0" mnemonicParsing="false" onAction="#voltarTela" opacity="0.0" prefHeight="25.0" prefWidth="101.0" />
+            <ImageView disable="true" fitHeight="25.0" fitWidth="101.0" layoutX="790.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../bin/icon/voltar%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

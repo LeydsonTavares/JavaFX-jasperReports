@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaEstoqueController">
+   <children>
+      <AnchorPane prefHeight="530.0" prefWidth="1270.0">
+         <children>
+            <Hyperlink fx:id="hl_NovoProduto" layoutX="50.0" layoutY="28.0" onAction="#cadastrarProduto" prefHeight="33.0" prefWidth="139.0" text="      Novo produto" textFill="#00ff22">
+               <font>
+                  <Font size="16.0" />
+               </font></Hyperlink>
+            <TableView fx:id="tb_Produtos" layoutX="50.0" layoutY="117.0" onMouseClicked="#mouseClicado" prefHeight="334.0" prefWidth="1100.0">
+               <effect>
+                  <DropShadow />
+               </effect></TableView>
+            <Hyperlink fx:id="hl_atualizarEstoque" layoutX="214.0" layoutY="28.0" onAction="#atualizaEstoque" prefHeight="33.0" prefWidth="165.0" text="      Atualizar estoque" textFill="#00ff22">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Hyperlink>
+            <ImageView disable="true" fitHeight="24.0" fitWidth="24.0" layoutX="214.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon%20atualizar.png" />
+               </image>
+            </ImageView>
+            <ImageView disable="true" fitHeight="24.0" fitWidth="24.0" layoutX="50.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/icon%20add.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txt_pesquisaProduto" layoutX="50.0" layoutY="69.0" onKeyReleased="#letraDigitada" prefHeight="25.0" prefWidth="562.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

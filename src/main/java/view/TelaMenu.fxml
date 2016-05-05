@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<Pane prefHeight="727.0" prefWidth="1325.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaMenuController">
+   <children>
+      <ImageView fitHeight="861.0" fitWidth="1370.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/planoDeFundo2.jpg" />
+         </image>
+      </ImageView>
+      <BorderPane prefHeight="628.0" prefWidth="1370.0">
+         <top>
+            <Pane prefHeight="141.0" prefWidth="1370.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator layoutX="-17.0" layoutY="118.0" prefHeight="19.0" prefWidth="1404.0">
+                     <effect>
+                        <InnerShadow color="#fcfafa" />
+                     </effect>
+                  </Separator>
+                  <Button fx:id="btnVendas" alignment="BASELINE_CENTER" contentDisplay="TOP" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#vendas" opacity="0.0" prefHeight="105.0" prefWidth="115.0" textAlignment="CENTER">
+                     <tooltip>
+                        <Tooltip text="Vendas" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnEstoque" alignment="CENTER" contentDisplay="BOTTOM" layoutX="152.0" layoutY="10.0" mnemonicParsing="false" onAction="#estocar" opacity="0.0" prefHeight="105.0" prefWidth="115.0">
+                     <tooltip>
+                        <Tooltip text="Produtos" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnRelatorios" contentDisplay="TOP" layoutX="290.0" layoutY="10.0" mnemonicParsing="false" onAction="#relatorios" opacity="0.0" prefHeight="105.0" prefWidth="115.0">
+                     <tooltip>
+                        <Tooltip text="Relátorios" />
+                     </tooltip></Button>
+                  <Button fx:id="btnFaturamento" contentDisplay="TOP" layoutX="424.0" layoutY="10.0" mnemonicParsing="false" onAction="#faturamento" opacity="0.0" prefHeight="105.0" prefWidth="115.0">
+                     <tooltip>
+                        <Tooltip text="Histórico Faturamento" />
+                     </tooltip></Button>
+                  <Button fx:id="btnCadastroCliente" contentDisplay="TOP" layoutX="558.0" layoutY="10.0" mnemonicParsing="false" onAction="#cadastrar" opacity="0.0" prefHeight="105.0" prefWidth="115.0">
+                     <tooltip>
+                        <Tooltip text="Cadastro Cliente" />
+                     </tooltip></Button>
+                  <ImageView disable="true" fitHeight="59.0" fitWidth="74.0" layoutX="42.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/icon%20vendas.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView disable="true" fitHeight="59.0" fitWidth="74.0" layoutX="317.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/icon%20financeiro.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView disable="true" fitHeight="59.0" fitWidth="74.0" layoutX="180.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/icon%20estoque.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="47.0" layoutY="94.0" text="Vendas" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="183.0" layoutY="94.0" text="Estoque" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="314.0" layoutY="94.0" text="Financeiro" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <HBox fx:id="conteudo" alignment="CENTER" prefHeight="521.0" prefWidth="1032.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="529.0" prefWidth="1064.0" />
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+      <Separator layoutY="630.0" prefHeight="19.0" prefWidth="1363.0">
+         <effect>
+            <InnerShadow color="#fcfafa" />
+         </effect>
+      </Separator>
+      <Label layoutX="90.0" layoutY="655.0" prefHeight="27.0" prefWidth="1145.0" text="©  2016 - Todos os direitos reservados                                                                                                                    V.1 - 10/01/2016" textFill="#f5f5f5">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
